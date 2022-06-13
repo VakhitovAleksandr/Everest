@@ -1,38 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Эверест</title>
-  </head>
+<html lang="en" class="page">
 
-  <body>
-    <!-- Header -->
-    <header class="header" id="header">
-      <div class="container">
-        <div class="header__row">
-          <div class="header__content">
-            <a href="/" class="header__logo">
-              <img src="./img/logo.png" alt="эверест" />
-            </a>
-            <ul class="header__contacts contacts-header">
-              <li class="contacts-header__item">
-                <img src="./img/map.svg" alt="map" />
-                <a href="#"
-                  >г.Екатеринбург, ул. Сакко и Ванцетти 105, корпус 2</a
-                >
-              </li>
-              <li class="contacts-header__item">
-                <img src="./img/phone.svg" alt="phone" />
-                <a href="#">+7 (961) 573-88-63</a>
-              </li>
-            </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <title>Сертификация "Союз Тест Партнеры"</title>
+
+
+</head>
+
+<body class="page__body">
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__row">
+        <div class="header__content">
+          <a href="/" class="header__logo">
+            <img src="./img/logo.png" alt="эверест" />
+          </a>
+          <ul class="header__contacts contacts-header">
+            <li class="contacts-header__item">
+              <img src="./img/map.svg" class="contacts-header__icon" alt="map" />
+              <a href="#" class="contacts-header__link">г.Екатеринбург, ул. Сакко и Ванцетти 105, корпус 2</a>
+            </li>
+            <li class="contacts-header__item">
+              <img src="./img/phone.svg" class="contacts-header__icon" alt="phone" />
+              <a href="tel:+79615738863" class="contacts-header__link">+7 (961) 573-88-63</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__row">
+        <nav id="nav" class="nav-top">
+          <div class="burger-menu"></div>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link menu__link-active">Разработка плнана ХАССП</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Сертификация ТР, ТС, ГОСТ</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Сертификация ISO</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Техническая документация</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Новости</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Slider -->
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="swiper-slide__img">
+            <img src="./img/slide-img.png" alt="">
+          </div>
+          <div class="offer-top">
+            <h1 class="offer-top__title">
+              Помощь в оформлении сертификатов и разрешительной документации
+            </h1>
+            <span class="offer-top__subtitle">
+              Качественно, не дорого! Работаем с 2015 года
+              Более 1000 довольных клиентов
+            </span>
+            <button class="button">Получить</button>
           </div>
         </div>
-        <div class="header__row"></div>
+        <div class="swiper-slide">
+          <div class="swiper-slide__img">
+            <img src="./img/slide-img.png" alt="">
+          </div>
+          <div class="offer-top">
+            <h1 class="offer-top__title">
+              Помощь в оформлении сертификатов и разрешительной документации
+            </h1>
+            <span class="offer-top__subtitle">
+              Качественно, не дорого! Работаем с 2015 года
+              Более 1000 довольных клиентов
+            </span>
+            <button class="button">Получить</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide__img">
+            <img src="./img/slide-img.png" alt="">
+          </div>
+          <div class="offer-top">
+            <h1 class="offer-top__title">
+              Помощь в оформлении сертификатов и разрешительной документации
+            </h1>
+            <span class="offer-top__subtitle">
+              Качественно, не дорого! Работаем с 2015 года
+              Более 1000 довольных клиентов
+            </span>
+            <button class="button">Получить</button>
+          </div>
+        </div>
       </div>
-    </header>
-  </body>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="offer">
+      <div class="offer__wrapper">
+        <div class="container">
+          <div class="offer__row">
+            <div class="offer__col">
+              <div class="form-bg">
+                <img src="./img/Ellipse.svg" alt="">
+                <form class="form">
+                  <h2 class="form__title">
+                    Получить <br> консультацию</h2>
+                  <span class="form__subtitle">Свяжемся с вами в ближайшее время!</span>
+                  <div class="form__inputs">
+                    <input type="text" class="form__input" placeholder="Ваше Имя">
+                    <input type="text" class="form__input" placeholder="Номер телефона">
+                  </div>
+                  <label class="form__label">
+                    <input type="checkbox">
+                    <span>Даю согласие на обработку персональных данных,
+                      в соответствии <b><a href="#">политикой конфеденциальности.</a></b> </span>
+                  </label>
+                  <button class="button">Получить</button>
+                </form>
+              </div>
+            </div>
+            <div class="offer__col">
+              <h2 class="offer__title">Наши преимущества:</h2>
+              <ul class="offer__list list-offer">
+                <li class="list-offer__item">
+                  <img src="./img/check.svg" alt="">
+                  На рынке уже более 7 лет
+                </li>
+                <li class="list-offer__item">
+                  <img src="./img/check.svg" alt="">
+                  Являемся аккредитованным органом по
+                </li>
+                <li class="list-offer__item">
+                  <img src="./img/check.svg" alt="">
+                  сертификации товаров и услуг
+                </li>
+                <li class="list-offer__item">
+                  <img src="./img/check.svg" alt="">
+                  Оперативное оформление документов
+                </li>
+                <li class="list-offer__item">
+                  <img src="./img/check.svg" alt="">
+                  Экспертный подход
+                </li>
+                <li class="list-offer__item">
+                  <img src="./img/check.svg" alt="">
+                  Бесплатная консультация
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="nav-bottom">
+      <div class="container">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link menu__link-active">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Пасспорт безопасности (ПБ) химической продукции</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Связаться с нами</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__row">
+        <a href="/" class="footer__logo">
+          <img src="./img/logo.png" alt="эверест">
+        </a>
+        <div class="footer__social social-footer">
+          <a href="/" class="map-site">Карта сайта</a>
+          <div class="social-footer__links">
+            <a href="/" class="social-footer__link">
+              <img src="./img/WhatsApp.svg" alt="">
+            </a>
+            <a href="/" class="social-footer__link">
+              <img src="./img/Telegram.svg" alt="">
+            </a>
+          </div>
+          <span class="copy">&#64; 2019 «Союз Тест Партнёры». <b><a href="#">Политика конфеденциальности.</a></b>
+          </span>
+        </div>
+        <ul class="footer__contacts contacts-footer">
+          <li class="contacts-footer__item">
+            <img src="./img/mail.svg" class="contacts-footer__icon" alt="">
+            <a href="mailto:stp-signature@mail.ru" class="contact-footer__link">stp-signature@mail.ru</a>
+          </li>
+          <li class="contacts-footer__item">
+            <img src="./img/phone.svg" class="contacts-footer__icon" alt="">
+            <a href="tel:+79615738863" class="contact-footer__link">+7 961 573 88 63</a>
+          </li>
+          <li class="contacts-footer__item">
+            <img src="./img/map.svg" class="contacts-footer__icon" alt="">
+            <a href="#" class="contact-footer__link">г.Екатеринбург,
+              ул. Сакко и Ванцетти 105/2</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".swiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+
 </html>
