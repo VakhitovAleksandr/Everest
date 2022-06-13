@@ -50,7 +50,7 @@
 }
 
 .page__body {
-  font-family: "SF UI Display Regular";
+  font-family: "SF UI Display Regular", sans-serif;
   background: #f5f5f5;
   display: -webkit-box;
   display: -ms-flexbox;
