@@ -137,17 +137,16 @@
   text-decoration: none;
 }
 
-.nav-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.nav {
+  background: #fff;
+}
+
+.nav-bottom {
+  margin-bottom: 82px;
 }
 
 @media (max-width: 1000px) {
-  .nav-top {
+  .nav-mobile {
     padding: 15px 0;
   }
 }
@@ -171,6 +170,23 @@
   background: #fff;
 }
 
+@media (max-width: 1000px) {
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    text-align: center;
+    row-gap: 0px;
+  }
+  .menu > *:not(:first-child) {
+    border-top: solid 1px #eee;
+  }
+}
+
 .menu__item {
   display: block;
   font-weight: 600;
@@ -188,15 +204,94 @@
   border-bottom: 2px solid transparent;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  text-align: center;
 }
 
 .menu__link:hover, .menu__link-active {
   border-bottom: 2px solid #14ae64;
 }
 
-.nav-bottom {
+@media (max-width: 1000px) {
+  .menu-mobile {
+    border-top: solid 1px #eee;
+    position: absolute;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .menu-mobile .menu__item {
+    background: #f9f9f9;
+  }
+}
+
+.burger-menu {
+  display: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #a02521;
+  padding: 10px;
+}
+
+.burger-menu span {
+  display: block;
+  width: 100%;
+  height: 1px;
   background: #fff;
-  margin-bottom: 82px;
+  position: relative;
+}
+
+.burger-menu span::after,
+.burger-menu span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  left: 0;
+  background: inherit;
+  width: 100%;
+  height: 1px;
+}
+
+.burger-menu span::before {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.burger-menu span::after {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+@media (max-width: 1000px) {
+  .burger-menu {
+    display: block;
+  }
+}
+
+.burger-menu.active span {
+  height: 0;
+}
+
+.burger-menu.active span::after,
+.burger-menu.active span::before {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.burger-menu.active span::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger-menu.active span::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .swiper {

@@ -129,14 +129,18 @@
   }
 }
 
-.nav-top {
-  display: flex;
-  align-items: center;
+// Navigation
+.nav {
+  background: #fff;
+}
+.nav-bottom {
+  margin-bottom: 82px;
+}
+.nav-mobile {
   @media (max-width: 1000px) {
     padding: 15px 0;
   }
 }
-// Menu
 .menu {
   display: flex;
   align-items: center;
@@ -146,6 +150,15 @@
   width: 100%;
   justify-content: center;
   background: #fff;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    row-gap: 0px;
+    & > *:not(:first-child) {
+      border-top: solid 1px #eee;
+    }
+  }
 }
 .menu__item {
   display: block;
@@ -162,15 +175,78 @@
   color: inherit;
   border-bottom: 2px solid transparent;
   transition: 0.2s;
+  text-align: center;
 
   &:hover,
   &-active {
     border-bottom: 2px solid #14ae64;
   }
 }
-.nav-bottom {
-  background: #fff;
-  margin-bottom: 82px;
+.menu-mobile {
+  @media (max-width: 1000px) {
+    border-top: solid 1px #eee;
+    position: absolute;
+    transform: translateY(-100%);
+    left: 0;
+    top: 100%;
+    width: 100%;
+
+    z-index: -1;
+    & .menu__item {
+      background: #f9f9f9;
+    }
+  }
+}
+.burger-menu {
+  display: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #a02521;
+  padding: 10px;
+  & span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    position: relative;
+  }
+  & span::after,
+  & span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    transition: 0.2s;
+    left: 0;
+    background: inherit;
+    width: 100%;
+    height: 1px;
+  }
+  & span::before {
+    transform: translateY(-7px);
+  }
+  & span::after {
+    transform: translateY(7px);
+  }
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+.burger-menu.active {
+  & span {
+    height: 0;
+  }
+  & span::after,
+  & span::before {
+    transform: translateY(0);
+  }
+  & span::before {
+    transform: rotate(45deg);
+  }
+  & span::after {
+    transform: rotate(-45deg);
+  }
 }
 
 // Swiper
