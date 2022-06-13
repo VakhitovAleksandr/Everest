@@ -341,12 +341,21 @@
 }
 
 .form-wrapper {
+  -webkit-transform: translateX(-63px);
+          transform: translateX(-63px);
   max-width: 670px;
   padding: 56px 130px;
   background-image: url(../img/Ellipse.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+@media (max-width: 1300px) {
+  .form-wrapper {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .form {
@@ -362,7 +371,6 @@
       -ms-flex-align: center;
           align-items: center;
   color: #3d3d3d;
-  z-index: 100;
 }
 
 .form__title {
