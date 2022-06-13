@@ -35,10 +35,10 @@
       </div>
       <div class="header__row">
         <nav id="nav" class="nav-top">
-          <div class="burger-menu"></div>
-          <ul class="menu">
+          <button class="burger-menu"><span></span></button>
+          <ul class="menu menu-mobile">
             <li class="menu__item">
-              <a href="#" class="menu__link menu__link-active">Разработка плнана ХАССП</a>
+              <a href="#" class="menu__link">Разработка плнана ХАССП</a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">Сертификация ТР, ТС, ГОСТ</a>
@@ -185,7 +185,7 @@
       <div class="container">
         <ul class="menu">
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link-active">О компании</a>
+            <a href="#" class="menu__link">О компании</a>
           </li>
           <li class="menu__item">
             <a href="#" class="menu__link">Пасспорт безопасности (ПБ) химической продукции</a>
@@ -241,6 +241,7 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
   <script>
     var swiper = new Swiper(".swiper", {
       navigation: {

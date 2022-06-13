@@ -79,6 +79,18 @@
 // Header
 .header {
   background: #fff;
+  z-index: 3;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: -1;
+  }
 }
 .header__content {
   display: flex;
@@ -120,6 +132,9 @@
 .nav-top {
   display: flex;
   align-items: center;
+  @media (max-width: 1000px) {
+    padding: 15px 0;
+  }
 }
 // Menu
 .menu {
@@ -131,6 +146,23 @@
   width: 100%;
   justify-content: center;
   background: #fff;
+  @media (max-width: 1000px) {
+    border-top: solid 1px #eee;
+    transition: 0.2s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    row-gap: 1px;
+    z-index: -1;
+  }
+  &-mobile.active {
+    transform: translateY(0);
+  }
 }
 .menu__item {
   display: block;
@@ -139,6 +171,9 @@
   line-height: 120%;
   color: #3d3d3d;
   font-family: "SF UI Display Semibold";
+  @media (max-width: 1000px) {
+    background: #f9f9f9;
+  }
 }
 .menu__link {
   display: block;
@@ -154,10 +189,51 @@
   }
 }
 .burger-menu {
-  width: 30px;
-  height: 30px;
-  background: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  background: #a02521;
   display: none;
+  border: none;
+  span {
+    display: block;
+    height: 1px;
+    background: #000;
+    width: 100%;
+    position: relative;
+    background: #fff;
+    &::after,
+    &::before {
+      content: "";
+      transition: 0.2s;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: inherit;
+    }
+    &::after {
+      bottom: -7px;
+    }
+    &::before {
+      top: -7px;
+    }
+  }
+  &.active span {
+    height: 0;
+    &::before {
+      top: auto;
+      transform: rotate(45deg);
+    }
+    &::after {
+      bottom: auto;
+      transform: rotate(-45deg);
+    }
+  }
+  @media (max-width: 1000px) {
+    display: block;
+  }
 }
 .nav-bottom {
   background: #fff;
@@ -226,7 +302,9 @@
 
 // Main
 .main {
+  position: relative;
   flex: 1 0 auto;
+  z-index: 1;
 }
 
 // Offer
@@ -267,7 +345,6 @@
   column-gap: 15px;
   font-family: "SF UI Display Medium";
   font-size: 20px;
-  line-height: 206%;
 }
 .form-wrapper {
   max-width: 670px;
