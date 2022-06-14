@@ -235,6 +235,12 @@
         row-gap: 1px;
         li {
           background: #eee;
+          a {
+            border-bottom: none;
+            &:hover {
+              border-bottom: none;
+            }
+          }
         }
       }
     }
