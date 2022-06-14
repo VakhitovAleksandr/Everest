@@ -1,11 +1,12 @@
-let showHideMenu = function () {
+document.addEventListener("DOMContentLoaded", () => {
   const menuDrop = document.querySelector(".menu_top");
   const burgerBtn = document.querySelector(".burger");
 
-  burgerBtn.addEventListener("click", () => {
-    menuDrop.classList.toggle("open");
-    burgerBtn.classList.toggle("open");
-  });
-};
-
-showHideMenu();
+  let showHideMenu = function () {
+    burgerBtn.addEventListener("click", () => {
+      menuDrop.classList.toggle("open");
+      burgerBtn.classList.toggle("open");
+    });
+  };
+  showHideMenu();
+});
